@@ -1,0 +1,11 @@
+[Unit]
+Description=Repair Zigbee2mqtt database on startup if corrupted (happens after unclean shutdown). (Install to /etc/systemd/system/)
+
+[Service]
+Type=simple
+RemainAfterExit=yes
+ExecStart=/opt/scripts/repair_zigbee_db.sh
+TimeoutStartSec=0
+
+[Install]
+WantedBy=default.target
